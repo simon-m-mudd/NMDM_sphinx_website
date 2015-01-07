@@ -10,10 +10,15 @@
 
 
 
-Welcome to University of Edinburgh's Modelling, Numeracy and Data Managment Course
-==================================================================================
+Welcome to University of Edinburgh's Modelling, Numeracy and Data Managment (NMDM) Course
+==========================================================================================
 
-These webpages are designed to help you use some open source tools for scientific research such as version control, python, R and tools for examining spatial data. 
+A course offered through the E3 Doctoral Trainaing Partnership, funded through the Natural Environment Research Council. 
+
+Welcome to Numeracy, Modelling and Data Management (NMDM). 
+This course is intended to give you an overview of a number of tools that researchers can use to do research. 
+We will sacrifice depth for breath: you can think of this course as showing you tools that could be ueful for your research so that you can go to speacialised courses or use web resources in the futire if you want to deepen your understanding. 
+
 
 Introductory video
 -----------------------
@@ -34,6 +39,7 @@ Contents:
    :maxdepth: 3
    :numbered:
 
+   Background and motivation <background_and_motivation>
    Getting onto University of Edinburgh servers <getting_onto_servers>
    Simple commands in a shell <simple_shell>
 
