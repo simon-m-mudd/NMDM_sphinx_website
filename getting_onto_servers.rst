@@ -1,11 +1,30 @@
+.. _getting-on-servers:
+
 ==================================================================
 Instructions specific to the University of Edinburgh
 ==================================================================
 
 
 The documentation available on this page is specific to University of Edinburgh users. 
-It includes information on how to access our servers and how to compile the code on
-our systems. 
+It includes information on how to access our servers
+
+
+Videos
+==============
+
+  * `Getting onto our servers using nx and putty <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_002_nx_putty.mp4>`_.
+  * `Getting onto our servers using x2go <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_003_x2go.mp4>`_.
+
+Getting onto our servers using x2go
+===================================================
+
+  x2go is a remote desktop client that will in the future be the primary clinet for the school of GeoSciences. 
+  
+  You can set up an x2go client for Edinburgh's School of GeoSciences by following
+  `these instructions <https://www.geos.ed.ac.uk/it/FAQ/x2go.html>`_ (note you will have to log in to see them).
+
+
+
 
 .. _getting-onto-servers:
 

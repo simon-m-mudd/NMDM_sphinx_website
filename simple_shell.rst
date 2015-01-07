@@ -1,3 +1,5 @@
+.. _simple-shell:
+
 ===============================
 Simple commands in the shell
 ===============================
@@ -12,7 +14,7 @@ Simple commands in the shell
 External resources
 ========================
  
-  You can start by watching the videos listed below, but if you want more information there are numerous webistes that `list <http://mally.stanford.edu/~sr/computing/basic-unix.html>_`
+  You can start by watching the videos listed below, but if you want more information there are numerous webistes that `list <http://mally.stanford.edu/~sr/computing/basic-unix.html>`_
   `common <http://www.math.utah.edu/lab/unix/unix-commands.html>`_ `shell <http://www.tutorialspoint.com/unix/unix-useful-commands.htm>`_
   `commands <http://freeengineer.org/learnUNIXin10minutes.html>`_. 
   

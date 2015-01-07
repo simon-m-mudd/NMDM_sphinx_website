@@ -26,6 +26,21 @@ Introductory video
   `Click here for a brief introduction to the course <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_001_intro.mp4>`_.
 
 
+
+Schedule of the Course
+============================
+
+  #. Prior to week 1 tutorial: 
+      
+      * Read the section :ref:`background-head` and the recommended reading therein.
+      * Go through the videos in the section :ref:`getting-on-servers`.
+      * Go through the videos in the section :ref:`simple-shell`.
+      * Make sure you can open a terminal window in our servers, and navigate around files and folders.  
+  
+  #. Prior to week 2 tutorial:
+  
+      
+
 Authors
 =============
 
@@ -34,6 +49,7 @@ This website is built by:
   * `Simon M. Mudd <http://www.geos.ed.ac.uk/homes/smudd/>`_; School of GeoSciences, University of Edinburgh. 
 
 Contents:
+==================
 
 .. toctree::
    :maxdepth: 3
@@ -42,6 +58,7 @@ Contents:
    Background and motivation <background_and_motivation>
    Getting onto University of Edinburgh servers <getting_onto_servers>
    Simple commands in a shell <simple_shell>
+   Version control with git <version_control_git>
 
 Indices and tables
 ==================
