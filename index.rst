@@ -57,6 +57,7 @@ Contents:
 
    Background and motivation <background_and_motivation>
    Getting onto University of Edinburgh servers <getting_onto_servers>
+   Setting up a virtual linux machine for work outside of the Edinburgh network <outside_edin>
    Simple commands in a shell <simple_shell>
    Version control with git <version_control_git>
 
