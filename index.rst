@@ -39,6 +39,10 @@ Schedule of the Course
   
   #. Prior to week 2 tutorial:
   
+      * Set up a `github <https://github.com/>`_ account. 
+      * Create a github repository and push some files to it. 
+        I suggest some simple `markdown <https://help.github.com/articles/markdown-basics/>`_ files to start (see the videos).
+      *
       
 
 Authors
@@ -60,6 +64,8 @@ Contents:
    Setting up a virtual linux machine for work outside of the Edinburgh network <outside_edin>
    Simple commands in a shell <simple_shell>
    Version control with git <version_control_git>
+   Basic python <basic_python>
+   
 
 Indices and tables
 ==================

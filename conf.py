@@ -93,6 +93,20 @@ pygments_style = 'sphinx'
 # Sphinx are currently 'default' and 'sphinxdoc'.
 html_theme = 'default'
 
+#html_theme = "flask"
+#html_theme_path = ["_themes/flask-sphinx-themes"]
+#html_theme_options = {
+#        "tagline": "Beautiful.",
+#        "github": "https://github.com/dfm/daftish",
+#        "license_name": "CC Attribution 3.0 License",
+#        "license_link": "http://creativecommons.org/licenses/by/3.0/deed.en_US",
+#        # "google_analytics": "UA-XXXXXXXX-1",
+#    }
+#html_sidebars = {
+#            "**": ["relations.html", "searchbox.html"]
+#        }
+
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
