@@ -34,6 +34,24 @@ git basics
   `with <https://guides.github.com/features/mastering-markdown/>`_ the
   `basics <http://whatismarkdown.com/>`_.
   
+A note on configuration
+---------------------------------------
+
+  **You need to set your username and email** on git, if you don't it will insert a username and email for you. 
+  This becomes slightly important if you want a consistent commit record on github the user.name and user.email need to be the same as your github account. 
+  
+  So, for example::
+  
+    git config --global user.name John Doe
+    git config --global user.email John@Doe.com
+    
+  I've sometimes had trouble with this in the University of Edinburgh environment, 
+  I'm not quite sure why but if you start getting warning mesages try a local config::
+  
+    git config --local user.name John Doe
+    git config --local user.email John@Doe.com  
+  
+  
 Videos
 ---------------
 
