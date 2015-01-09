@@ -32,4 +32,21 @@ Next step: your first python script
   This script will then be called from the command line.
   The video will take you through the creation of this file and how to get it on github.  
   
+  `Setting up the github repository for your python scripts <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_016_github_python.mp4>`_.
   
+  You should create a folder, make a simple data file like this::
+  
+    1,2,3,4
+    3,2,1,4
+    2,3,4,1
+    
+  in your favourite text editor and call it some_data.csv in this folder. 
+  
+  Then, put this folder under git version control (see video or the git section if you don't know how to do this) and then link it with a new github repository. 
+  
+  `The next step is to make a python script <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_017_pythonscript.mp4>`_.
+  
+  You'll see in the video the contents of the file. You should try to make your own file. 
+  
+  `Next, try to use the open command in phython to extract data as strings <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_018_pyreadfile.mp4>`_.
+   

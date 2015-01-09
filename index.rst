@@ -42,7 +42,15 @@ Schedule of the Course
       * Set up a `github <https://github.com/>`_ account. 
       * Create a github repository and push some files to it. 
         I suggest some simple `markdown <https://help.github.com/articles/markdown-basics/>`_ files to start (see the videos).
-      *
+      * You should try to make a few repositories and get comfortable with git. 
+      * Go through the videos in the git section of this website. 
+  
+  #. Prior to week 3 tutorial:
+  
+      * Go to the basic python pages on this website, and use `codeacademy <http://www.codecademy.com/en/tracks/python>`_ to learn some python basics.
+      * Set up a python repository in github. 
+      * Make a small program for reading files based on the videos.
+  
       
 
 Authors
