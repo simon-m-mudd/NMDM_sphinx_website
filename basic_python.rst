@@ -28,4 +28,8 @@ First steps: use the web!
 Next step: your first python script
 ===============================================
 
+  In this section, we will make our first python script.
+  This script will then be called from the command line.
+  The video will take you through the creation of this file and how to get it on github.  
+  
   
