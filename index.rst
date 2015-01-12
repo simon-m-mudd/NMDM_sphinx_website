@@ -10,14 +10,14 @@
 
 
 
-Welcome to University of Edinburgh's Modelling, Numeracy and Data Managment (NMDM) Course
+Welcome to University of Edinburgh's Modelling, Numeracy and Data Management (NMDM) Course
 ==========================================================================================
 
-A course offered through the E3 Doctoral Trainaing Partnership, funded through the Natural Environment Research Council. 
+A course offered through the E3 Doctoral Training Partnership, funded through the Natural Environment Research Council. 
 
 Welcome to Numeracy, Modelling and Data Management (NMDM). 
 This course is intended to give you an overview of a number of tools that researchers can use to do research. 
-We will sacrifice depth for breath: you can think of this course as showing you tools that could be ueful for your research so that you can go to speacialised courses or use web resources in the futire if you want to deepen your understanding. 
+We will sacrifice depth for breath: you can think of this course as showing you tools that could be useful for your research so that you can go to specialised courses or use web resources in the future if you want to deepen your understanding. 
 
 
 Introductory video

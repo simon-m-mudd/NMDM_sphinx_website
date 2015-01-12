@@ -94,12 +94,12 @@ Adding files and directories to the repository
   
     git add README.md
     
-  You can also add folders and all their contianing files this way. 
+  You can also add folders and all their containing files this way. 
  
 Committing to the repository
 ------------------------------------------------------
 
-  Adding files **DOES NOT** mean that you are now keeping track of changes. You do this by "commitng" them. 
+  Adding files **DOES NOT** mean that you are now keeping track of changes. You do this by "commiting" them. 
   A ``commit`` command tells git that you want to store changes. 
   
   You need to add a message with the ``-m`` flag. Like this::

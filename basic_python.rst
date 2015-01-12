@@ -48,5 +48,5 @@ Next step: your first python script
   
   You'll see in the video the contents of the file. You should try to make your own file. 
   
-  `Next, try to use the open command in phython to extract data as strings <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_018_pyreadfile.mp4>`_.
+  `Next, try to use the open command in python to extract data as strings <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_018_pyreadfile.mp4>`_.
    

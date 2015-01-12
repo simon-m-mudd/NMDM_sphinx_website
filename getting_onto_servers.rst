@@ -18,7 +18,7 @@ Videos
 Getting onto our servers using x2go
 ===================================================
 
-  x2go is a remote desktop client that will in the future be the primary clinet for the school of GeoSciences. 
+  x2go is a remote desktop client that will in the future be the primary client for the school of GeoSciences. 
   
   You can set up an x2go client for Edinburgh's School of GeoSciences by following
   `these instructions <https://www.geos.ed.ac.uk/it/FAQ/x2go.html>`_ (note you will have to log in to see them).
@@ -87,19 +87,21 @@ Using NX from your home computer
 Some notes on file storage for staff and postgraduates (as of 18/9/2014 undergraduates do not have access)
 ============================================================================================================
 
-  If you are a user at the University of Edinburgh, you can donate some of your
-  `DataStore <http://www.geos.ed.ac.uk/it/DataStore.html>`_ allocation to the group. 
+  Every staff member and PhD student at the University of Edinburgh has access to 500GB of storage on the `Edinburgh datastore <http://www.ed.ac.uk/schools-departments/information-services/research-support/data-management/data-storage>`_. 
   
-  Our groupname is LSDTopoData. 
+  This is a very good place to put all of your files since it is backed up regularly (no losing your PhD if you spill coffee on your laptop!!). 
 
 Donating storage to the DataStore (this gives you access to it)
 ---------------------------------------------------------------------------
   
   To register, you need to:
   
-    #. Go to the web page: https://registration.ecdf.ed.ac.uk/storage/  
+    * Go to the web page: https://registration.ecdf.ed.ac.uk/storage/  
+    
+  If you are in a group with a group page, you can allocate data to this group:  
+    
     #. Under My DataStore Personal Space Allocations select `allocate to shared space`.
-    #. Select  datastore_geos_groups_LSDTopoData and assign some quota to it.
+    #. Select your groups shared space and allocate some data to it. 
 
 Creating a shortcut to the datastore from your home directory in Linux
 ----------------------------------------------------------------------------
@@ -110,17 +112,16 @@ Creating a shortcut to the datastore from your home directory in Linux
   To do this, just go into the directory from which you want the link 
   in a terminal (this will probably be your home directory) and type::
   
-    ln -s /exports/csce/datastore/geos/groups/LSDTopoData NameOfLink 
-    
-  Where `NameOfLink` is just the name you want for the link (I used LSDTopoData).
-  
-  You could also do this for your personal DataStore folder::
-  
     ln -s /exports/csce/datastore/geos/users/UUN NameOfLink
     
-  where `UUN` is your university username. If you are a student this is your
-  student number. 
+  or if you are in, say, biology is will be::
   
+    ln -s /exports/csce/datastore/biology/users/UUN NameOfLink
+    
+  where `UUN` is your university username. If you are a student this is your
+  student number. Note that the `csce` in the above link is for the College of Science and Engineering.
+  If you are in another college you will have to modify the link. 
+      
   *WARNING!!!* If you sync your laptop or home computer to your M drive this will 
   result in your home computer syncing to BOTH your M drive and your DataStore drive.
      

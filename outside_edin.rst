@@ -15,8 +15,7 @@ Operating systems
   and our code uses a large amount of memory and is computationally expensive.
   
   I (`SMM <http://www.geos.ed.ac.uk/homes/smudd>`_) have managed to get components of the code to run on the Windows operating system using something called `cygwin <https://www.cygwin.com/>`_.
-  This is perhaps not ideal, however, since I've never managed to get the `FFTW <http://www.fftw.org/>`_ package working on my Windows computers via cygwin, 
-  and a number of our routines rely on this package. 
+  I've found that some specific packages are difficult to get running on cygwin, however, so I've found it more functional to use linux. 
   
   My group does not use Apple products, so we have no expertise in getting the software to run on Apple computers.
   Apple uses a linux operating system "under the hood" of its proprietary operating systems, 
