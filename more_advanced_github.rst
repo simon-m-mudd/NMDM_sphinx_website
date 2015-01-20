@@ -1,6 +1,6 @@
 .. _more_advanced_github:
 
-============================================================
+
 Working with GitHub repositories on more than one computer
 ============================================================
 
@@ -12,7 +12,7 @@ If you haven't, start here: :ref:`version-control-git`.
 This section complements the always outstanding instructions at `Software carpentry <http://www.software-carpentry.org/v5/novice/git/>`_.
 
 
-==========================================================
+
 Giving other people commit privileges to your repository
 ==========================================================
 
@@ -23,7 +23,7 @@ You can, by changing the ``commit`` privileges on your repository.
 
 `Click here for instructions on how to add collaborators to your GitHub repository <https://help.github.com/articles/adding-collaborators-to-a-personal-repository/>`_. 
 
-========================================
+
 Pulling, fetching, merging and cloning
 ========================================
 
@@ -39,7 +39,7 @@ We will discuss these commands below, but you can also read about them on
 `Software Carpentry collaboration lesson <http://www.software-carpentry.org/v5/novice/git/02-collab.html>`_.
 
 Cloning a repository
-=================================
+------------------------------------
 
 If you want to reproduce a repository on your home computer, the place to start is probably by using the ``clone`` command. 
 
@@ -51,7 +51,7 @@ You do this by typing in::
 Where you need to update the ``USERNAME`` and ``REPOSITORY`` to the appropriate names. 
 
 If it is **your** repository
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the repository belongs to you, you can start committing changes on the new computer and then pushing them to master::
 
@@ -64,7 +64,7 @@ If you use the ``clone`` command on your own repository the ``origin`` of the cl
 Otherwise, you will put one of your repositories out of synch with the "master" repository and you will need to use the "merge" command, which can be rather tedious. 
 
 If the repository **belongs to someone else**
-----------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Say you've cloned a repository belonging to someone else. This will download all the files and initiate ``git`` tracking.
 You are free to ``commit`` changes on your local files. But what happens if you try to ``push``?
@@ -74,7 +74,7 @@ Unless the owner of that repository has `specifically given you commit permissio
 then you will not be able to commit to that repository.
 
 Forking: cloning and tracking your own edits
-===============================================
+-----------------------------------------------
 
 Say you want to start editing someone else's code, but you don't have commit priviledges. What you can do is **fork** a repository. 
 
@@ -93,7 +93,7 @@ You can `click here to read the details <https://help.github.com/articles/fork-a
   * You can now make changes, ``commit`` them and ``push`` them to ``origin``. 
   
 How do I keep my fork synched with the original repository?
----------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You've forked a repository, but suppose the owner of the original repository is a super hacker and is updating their code all the time?
 
@@ -115,7 +115,7 @@ The "upstream" is not a command, it is a name, so if you wanted you could call i
   
 
 Fetching a repository
-=============================================
+------------------------------------
 
 The ``fetch`` command grabs work without merging that work with the existing main branch of the code. 
 
@@ -123,7 +123,7 @@ You can read about how ``fetch`` allows you to synch a fork ``by clicking here <
 
 
 Merging a repository
-===============================================
+------------------------------------
 
 If you use fetch, you will need to merge the changes with preexisting code. To do this you use the ''merge'' command. 
 
@@ -134,6 +134,6 @@ If you have a conflict in your files, you will need to resolve them.
 
 
 Pull: merging and fetching in one go
-============================================
+------------------------------------
 
 The ``git pull`` command is a combination of ``fetch`` and ``merge``. 
