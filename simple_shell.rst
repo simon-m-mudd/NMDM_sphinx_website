@@ -9,7 +9,7 @@ Simple commands in the shell
   If you are used to windows-based systems, it may seem archaic to use a text based system, but scientists, engineerrs and programmers have been using
   these systems for years and have designed them to be fast and efficient, once you learn how to use them. 
 
-  Here we will intorduce you to some basic shell commands you will use frequently. 
+  Here we will introduce you to some basic shell commands you will use frequently. 
 
 External resources
 ========================

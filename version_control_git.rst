@@ -172,6 +172,8 @@ Creating local repo and then Github repository
     #. Then I pushed to the master. That seemed to fix things::
     
         git push -u origin master
+        
+        
 
  
  
