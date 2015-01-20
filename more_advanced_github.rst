@@ -1,6 +1,6 @@
 .. _more_advanced_github:
 
-
+============================================================
 Working with GitHub repositories on more than one computer
 ============================================================
 

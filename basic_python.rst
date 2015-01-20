@@ -49,4 +49,15 @@ Next step: your first python script
   You'll see in the video the contents of the file. You should try to make your own file. 
   
   `Next, try to use the open command in python to extract data as strings <http://www.geos.ed.ac.uk/~smudd/export_data/EMDM_videos/DTP_NMDMcourse_video_018_pyreadfile.mp4>`_.
+
+Playing with some example scripts
+=============================================
+
+  I've created a number of python scripts that you might want to modify and test how they work. 
+  
+  You can see the repository `by clicking here <https://github.com/simon-m-mudd/test_python_scripts>`_. 
+  
+  You might want to **fork** this repository (look for link in upper right corner). 
+  More details about forking can be found on this website: :ref:`more_advanced_github`, 
+  and by `clicking on the GitHub help pages <https://help.github.com/articles/fork-a-repo/>`_.
    
