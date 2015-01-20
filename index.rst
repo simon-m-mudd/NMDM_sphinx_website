@@ -72,6 +72,7 @@ Contents:
    Setting up a virtual linux machine for work outside of the Edinburgh network <outside_edin>
    Simple commands in a shell <simple_shell>
    Version control with git <version_control_git>
+   More advanced git usage (cloning and collaborating> <more_advanced_github>
    Basic python <basic_python>
    
 
