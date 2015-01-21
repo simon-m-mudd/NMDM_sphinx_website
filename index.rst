@@ -51,7 +51,12 @@ Schedule of the Course
       * Set up a python repository in github. 
       * Make a small program for reading files based on the videos.
   
-      
+  #. Prior to week 4 tutorial:
+
+      * Read the Matplotlib section on this website
+      * Create the two programs detailed in parts 1 and 2
+      * Explore other matplotlib possibilities for your own work
+
 
 Authors
 =============
@@ -74,6 +79,7 @@ Contents:
    Version control with git <version_control_git>
    More advanced git usage (cloning and collaborating> <more_advanced_github>
    Basic python <basic_python>
+   Creating figures with python: Matplotlib <matplotlib>
    
 
 Indices and tables
