@@ -43,7 +43,7 @@ Getting onto our servers using NX
 
      .. image:: ./_images/Edinburgh_specific/nx1.jpg
 
-  #. The 'host' is burn.geos.ed.ac.uk
+  #. The 'host' is *either* `burn.geos.ed.ac.uk` *or* `nx.geos.ed.ac.uk`
 
      .. image:: ./_images/Edinburgh_specific/nx2.jpg
 
