@@ -17,11 +17,133 @@ On a final note, one of the wonderful things about Matplotlib is the wealth of i
 
 OK, let’s begin…
 
-
-GETTING STARTED
+Getting Started
 =====================================
 
-OK, so first up we are going to have to download some data.  The first figure that we will be generating will be display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the National Oceanic and Atmospheric Administration (NOAA; http://www.ncdc.noaa.gov/).  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
+There are two parts to this tutorial, which can be undertaken independently, so feel free to start whichever one you like the look of.  In Part 1, you will discover the art of 'faking data' and learn to do some basic statistical analyses in addition to some further plotting options.  In Part 2, you will be learning to adjust and annotate figures within matplotlib, and progresses from basic formatting changes to more complex commands that give you an increasing amount of control in how the final figure is laid out and annotated.
+
+
+Saving Files For Adjusting In Inkscape
+=====================================
+
+You have previously been introduced to the savefig() function.  If you save your figures using “.svg” format, then you should be able to reopen and edit your figures in Inkscape or another graphics package::
+
+	plt.savefig(<filename.svg>, format =”svg”)
+
+We are not going to go into much detail on how to use Inkscape specifically as the possibilities are endless and most of you will have prior knowledge of using graphics packages.  However, if you have questions you’d like to ask about this, please see us at the computer lab session.
+
+
+PART 1- Producing fake data and serious statistical analysis
+=================================================
+
+In this section, we use a random number generator to create a dataset, and then learn how to plot the data with a maximum amount of information in one plot. Useful information such as error bars and a linear regression are detailed. By doing this exercise, you will also learn more about moles, their needs and dreams, and their potential impact on the environment.
+
+For the adventurous ones, you may want to explore a bit more and create additional plots such as a probability density function of the data or a boxplot. 
+
+The art of faking data
+------------------------
+Let's say I want to study the influence of moles on stress-related health issues in a part of the human population, gardeners for instance. Collecting this type of data can be very complex and will surely take a lot of time and money. So we will just assume that we did the study and fake the data instead. 
+
+At this point, I should probably point out that "fake data" can be a very serious topic and that is is the basis of many useful and relevant research branches, like stochastic hydrology for instance.
+
+In the following, ``av_mole`` refers to the average number of moles per square meter of garden. We want to know if this variable is correlated to the Health Index of Gardeners, commonly denoted ``HIG``. This index varies between zero (optimal health condition, bliss) and 10 (extreme health issues due to stress, eventually leading to premature death). 
+ 
+
+To begin, create a new, empty python file to write this code. 
+Import the packages (using the ``import`` command) that will be needed for this exercise::
+
+     import numpy as np
+     import matplotlib.pyplot as plt
+     from scipy import stats
+
+Now, to generate the data, you could simply use a vector of values with a linear increment (for ``av_mole``) and transform this using a given function. But the result would be way too smooth and nobody will believe you. Real data is messy. This is mostly due to the multitude of processes that interact in the real world and inluence your variable of interest to varying degrees. For instance, the mole population will be subject to worm availability, soil type, flooding events, vegetations and so on. All these environmental parameters add a noise to the signal of interest, that is ``av_mole``. 
+
+So to generate noisy data, we will use a random number generator::
+
+     N = 50
+     av_mole = np.random.rand(N)
+
+The function ``random.rand(N)`` creates an array of size N and propagate it with random samples from a uniform distribution over [0, 1).
+
+Now let's create the ``HIG`` variable::
+
+      HIG = 1+2*np.exp(x)+x*x+np.random.rand(N)
+      area = np.pi * (15 * np.random.rand(N))**2     
+
+A third variable called ``area`` (also fake, of course) gives the size of the 50 fields that were studied to provide the data. We now create the error associated to each variable::
+
+      mole_error = 0.1 + 0.1*np.sqrt(x)
+      hig_error = 0.1 + 0.2*np.sqrt(y)/10
+
+
+Scatter plot, error bars and additional information
+-----------------------------------------------------
+We now want to plot ``av_mole`` against ``HIG`` to see if these two varaibles are correlated. 
+First create the figure by typing::
+
+      fig = plt.figure(1, facecolor='white',figsize=(10,7.5))    
+      ax = plt.subplot(1,1,1)
+
+Then use the ``scatter`` function to plot the data. You can play with the different options such as the color, size of the points and so on. Here I define the color of each data point according to the area of the field studied::
+
+      obj = ax.scatter(av_mole, HIG, s=70, c=area, marker='o',cmap=plt.cm.jet, zorder=10)
+      cb = plt.colorbar(obj)
+      cb.set_label('Field Area (m2)',fontsize=20)
+
+Then we add the error bars using this function::
+
+      ax.errorbar(av_mole, HIG, xerr=mole_error, yerr=hig_error, fmt='o',color='b')   
+
+And add the labels and title::
+
+      plt.xlabel('Average number of moles per sq. meter', fontsize = 18)
+      plt.ylabel('Health Index for Gardeners (HIG)', fontsize = 18)
+      plt.title('Mole population against gardeners health', fontsize = 24)  
+
+
+Now we clearly see that the mole population seems to be linearly correlated with the HIG. The next step is to assess this correlation by performing a linear regression. 
+
+
+Linear regression
+--------------------
+Fortunately, the great majority of the most commonly used statistical functions are already coded in python. You just need to know the name of the tool you need. For the linear regression, there are several functions that would do the job, but the most straightforward is ``linregress`` from the ``stats`` package. This is one way to call the function, and at the same time define the parameters associated with the linear regression::
+
+      slope, intercept, r_value, p_value, std_err = stats.linregress(av_mole, HIG)
+
+The linear regression tool will find the equation of the best fitted line for your dataset. This equation is entirely defined by the ``slope`` and ``intercept``, and can be written as: HIG = slope * av_mole + intercept.
+
+You can display these parameters on your workspace in python using the ``print`` command::
+
+      print 'slope = ', slope
+      print 'intercept = ', intercept
+      print 'r value = ', r_value
+      print  'p value = ', p_value
+      print 'standard error = ', std_err
+
+The values of r, p and the standard error evaluate the quality of the fit between your data and the linear regression. To display the modeled line on your figure::
+ 
+      line = slope*av_mole+intercept
+      plt.plot(av_mole,line,'m-')
+      plt.title('Linear fit y(x)=ax+b, with a='+str('%.1f' % slope)+' and b='+str('%.1f' % intercept), fontsize = 24) 
+
+
+Boxplot, histogram and other stats
+------------------------------------
+If you want to learn more about your data, it can be very useful to plot the histogram or probability density function associated to your dataset. You can also plot the boxplots to display the median, standard deviation and other useful information.
+Try to create one (or both) of these plots, either in a subplot under your first figure, or in an embedded plot (figure within the figure). 
+ 
+You can use ``plt.boxplot`` to create the boxplot and ``plt.hist`` for the histogram and probability density function (depending on the parameters of the function). 
+
+
+
+
+PART 2- Plotting Climate Data
+=====================================
+
+Downloading the data
+--------------------
+
+OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the National Oceanic and Atmospheric Administration (NOAA; http://www.ncdc.noaa.gov/).  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
 
     * Open a terminal and navigate to your working directory – you may want to create a new directory for this class.
 
@@ -47,19 +169,6 @@ OK, so first up we are going to have to download some data.  The first figure th
 
 The next step is to make some plots.  There are two parts to this: the first will be to plot the ice core data you have just downloaded; the second will be to plot data that you will yourself create alongside some common statistical procedures…
 
-
-SAVING FILES FOR ADJUSTING IN INKSCAPE
-=====================================
-
-You have previously been introduced to the savefig() function.  If you save your figures using “.svg” format, then you should be able to reopen and edit your figures in Inkscape or another graphics package::
-
-	plt.savefig(<filename.svg>, format =”svg”)
-
-We are not going to go into much detail on how to use Inkscape specifically as most of you will have prior knowledge of using graphics packages and the possibilities are endless and ideally you will be able to automate your plotting so that they require as little editing as possible.  However, if you have questions you’d like to ask about this, please see us at the computer lab session.
-
-
-PART 1- PLOTTING CLIMATE DATA
-=====================================
 
 Basic plot
 --------------------
@@ -283,104 +392,4 @@ Well done for making it this far!
 
 
 
-PART 2- Producing fake data and serious statistical analysis
-=================================================
-
-In this section, we use a random number generator to create a dataset, and then learn how to plot the data with a maximum amount of information in one plot. Useful information such as error bars and a linear regression are detailed. By doing this exercise, you will also learn more about moles, their needs and dreams, and their potential impact on the environment.
-
-For the adventurous ones, you may want to explore a bit more and create additional plots such as a probability density function of the data or a boxplot. 
-
-The art of faking data
-------------------------
-Let's say I want to study the influence of moles on stress-related health issues in a part of the human population, gardeners for instance. Collecting this type of data can be very complex and will surely take a lot of time and money. So we will just assume that we did the study and fake the data instead. 
-
-At this point, I should probably point out that "fake data" can be a very serious topic and that is is the basis of many useful and relevant research branches, like stochastic hydrology for instance.
-
-In the following, ``av_mole`` refers to the average number of moles per square meter of garden. We want to know if this variable is correlated to the Health Index of Gardeners, commonly denoted ``HIG``. This index varies between zero (optimal health condition, bliss) and 10 (extreme health issues due to stress, eventually leading to premature death). 
- 
-
-To begin, create a new, empty python file to write this code. 
-Import the packages (using the ``import`` command) that will be needed for this exercise::
-
-     import numpy as np
-     import matplotlib.pyplot as plt
-     from scipy import stats
-
-Now, to generate the data, you could simply use a vector of values with a linear increment (for ``av_mole``) and transform this using a given function. But the result would be way too smooth and nobody will believe you. Real data is messy. This is mostly due to the multitude of processes that interact in the real world and inluence your variable of interest to varying degrees. For instance, the mole population will be subject to worm availability, soil type, flooding events, vegetations and so on. All these environmental parameters add a noise to the signal of interest, that is ``av_mole``. 
-
-So to generate noisy data, we will use a random number generator::
-
-     N = 50
-     av_mole = np.random.rand(N)
-
-The function ``random.rand(N)`` creates an array of size N and propagate it with random samples from a uniform distribution over [0, 1).
-
-Now let's create the ``HIG`` variable::
-
-      HIG = 1+2*np.exp(x)+x*x+np.random.rand(N)
-      area = np.pi * (15 * np.random.rand(N))**2     
-
-A third variable called ``area`` (also fake, of course) gives the size of the 50 fields that were studied to provide the data. We now create the error associated to each variable::
-
-      mole_error = 0.1 + 0.1*np.sqrt(x)
-      hig_error = 0.1 + 0.2*np.sqrt(y)/10
-
-
-Scatter plot, error bars and additional information
------------------------------------------------------
-We now want to plot ``av_mole`` against ``HIG`` to see if these two varaibles are correlated. 
-First create the figure by typing::
-
-      fig = plt.figure(1, facecolor='white',figsize=(10,7.5))    
-      ax = plt.subplot(1,1,1)
-
-Then use the ``scatter`` function to plot the data. You can play with the different options such as the color, size of the points and so on. Here I define the color of each data point according to the area of the field studied::
-
-      obj = ax.scatter(av_mole, HIG, s=70, c=area, marker='o',cmap=plt.cm.jet, zorder=10)
-      cb = plt.colorbar(obj)
-      cb.set_label('Field Area (m2)',fontsize=20)
-
-Then we add the error bars using this function::
-
-      ax.errorbar(av_mole, HIG, xerr=mole_error, yerr=hig_error, fmt='o',color='b')   
-
-And add the labels and title::
-
-      plt.xlabel('Average number of moles per sq. meter', fontsize = 18)
-      plt.ylabel('Health Index for Gardeners (HIG)', fontsize = 18)
-      plt.title('Mole population against gardeners health', fontsize = 24)  
-
-
-Now we clearly see that the mole population seems to be linearly correlated with the HIG. The next step is to assess this correlation by performing a linear regression. 
-
-
-Linear regression
---------------------
-Fortunately, the great majority of the most commonly used statistical functions are already coded in python. You just need to know the name of the tool you need. For the linear regression, there are several functions that would do the job, but the most straightforward is ``linregress`` from the ``stats`` package. This is one way to call the function, and at the same time define the parameters associated with the linear regression::
-
-      slope, intercept, r_value, p_value, std_err = stats.linregress(av_mole, HIG)
-
-The linear regression tool will find the equation of the best fitted line for your dataset. This equation is entirely defined by the ``slope`` and ``intercept``, and can be written as: HIG = slope * av_mole + intercept.
-
-You can display these parameters on your workspace in python using the ``print`` command::
-
-      print 'slope = ', slope
-      print 'intercept = ', intercept
-      print 'r value = ', r_value
-      print  'p value = ', p_value
-      print 'standard error = ', std_err
-
-The values of r, p and the standard error evaluate the quality of the fit between your data and the linear regression. To display the modeled line on your figure::
- 
-      line = slope*av_mole+intercept
-      plt.plot(av_mole,line,'m-')
-      plt.title('Linear fit y(x)=ax+b, with a='+str('%.1f' % slope)+' and b='+str('%.1f' % intercept), fontsize = 24) 
-
-
-Boxplot, histogram and other stats
-------------------------------------
-If you want to learn more about your data, it can be very useful to plot the histogram or probability density function associated to your dataset. You can also plot the boxplots to display the median, standard deviation and other useful information.
-Try to create one (or both) of these plots, either in a subplot under your first figure, or in an embedded plot (figure within the figure). 
- 
-You can use ``plt.boxplot`` to create the boxplot and ``plt.hist`` for the histogram and probability density function (depending on the parameters of the function). 
 
