@@ -24,7 +24,7 @@ There are two parts to this tutorial, which can be undertaken independently, so 
 
 
 Saving Files For Adjusting In Inkscape
-=====================================
+=========================================
 
 You have previously been introduced to the savefig() function.  If you save your figures using “.svg” format, then you should be able to reopen and edit your figures in Inkscape or another graphics package::
 
@@ -34,7 +34,7 @@ We are not going to go into much detail on how to use Inkscape specifically as t
 
 
 PART 1- Producing fake data and serious statistical analysis
-=================================================
+================================================================
 
 In this section, we use a random number generator to create a dataset, and then learn how to plot the data with a maximum amount of information in one plot. Useful information such as error bars and a linear regression are detailed. By doing this exercise, you will also learn more about moles, their needs and dreams, and their potential impact on the environment.
 
@@ -141,7 +141,7 @@ PART 2- Plotting Climate Data
 =====================================
 
 Downloading the data
---------------------
+---------------------
 
 OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the National Oceanic and Atmospheric Administration (NOAA; http://www.ncdc.noaa.gov/).  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
 
@@ -178,7 +178,7 @@ Before moving on, make sure that you understand what is going on in each line of
 
 
 Making this look better
---------------------
+------------------------
 
 Setting axis limits
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -224,7 +224,7 @@ Try adding labels the rest of the subplots.  Experiment with varying the locatio
 
 
 Making this look good
---------------------
+-----------------------
 
 The above commands will help improve the quality of your figure, but there are still some significant improvements that can be made.  
 
@@ -264,12 +264,12 @@ We now have a pretty decent figure, which you might well be happy sharing.  Note
 
 
 Now let’s zoom into the last Glacial-Interglacial cycle
---------------------
+----------------------------------------------------------
 
 Now we are going to add another subplot to the figure, except this time, we are going to use a subplot that has different dimensions to the previous ones.   Specifically we are going to make a final subplot, in which both the temperature and CO2 data, spanning 130ka-present, are plotted on the same set of axes.  We’ll also include a legend for good measure.
 
 Adding a new subplot with a different size – layout control with the subplot2grid function
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 subplot2grid is the new way in which we are going to define the subplots.   It is similar in functionality to the previous subplot, except that we declare a grid of cells, and then tell matplotlib which cells should be used for each subplot.  This gives us more flexibility in terms of the figure layout.   ``I’d suggest scanning this page to get a better idea <http://matplotlib.org/users/gridspec.html>`_.
 
@@ -344,7 +344,7 @@ The legend can then be constructed in ax5 with the following three lines of code
 VERY nearly finished!  We can do better though!
 
 Annotations – making this look awesome!
---------------------
+--------------------------------------------
 
 You might decide to make any further adjustments and annotations manually in Inkscape or another graphics package.  This is fine, and depending on your purposes might actually be better/more efficient, especially if you are going to need to do extensive and complex annotations, as it gets progressively more fiddly to do this in matplotlib.  However, I list below a few examples highlighting some of the tools that matplotlib provides for making your figures shine.
 
