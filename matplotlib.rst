@@ -143,7 +143,7 @@ PART 2- Plotting Climate Data
 Downloading the data
 ---------------------
 
-OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the National Oceanic and Atmospheric Administration (NOAA; http://www.ncdc.noaa.gov/).  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
+OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the `National Oceanic and Atmospheric Administration <NOAA; http://www.ncdc.noaa.gov/>`_.  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
 
     * Open a terminal and navigate to your working directory – you may want to create a new directory for this class.
 
@@ -271,7 +271,7 @@ Now we are going to add another subplot to the figure, except this time, we are 
 Adding a new subplot with a different size – layout control with the subplot2grid function
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-subplot2grid is the new way in which we are going to define the subplots.   It is similar in functionality to the previous subplot, except that we declare a grid of cells, and then tell matplotlib which cells should be used for each subplot.  This gives us more flexibility in terms of the figure layout.   ``I’d suggest scanning this page to get a better idea <http://matplotlib.org/users/gridspec.html>`_.
+subplot2grid is the new way in which we are going to define the subplots.   It is similar in functionality to the previous subplot, except that we declare a grid of cells, and then tell matplotlib which cells should be used for each subplot.  This gives us more flexibility in terms of the figure layout.   `I’d suggest scanning this page to get a better idea <http://matplotlib.org/users/gridspec.html>`_.
 
 Now I reckon that in my ideal figure, the above subplots should fit into the upper two thirds of the page.  As a result, we should change the subplot declarations, so that rather than::
 
