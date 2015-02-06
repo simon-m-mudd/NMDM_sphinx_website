@@ -143,7 +143,7 @@ PART 2- Plotting Climate Data
 Downloading the data
 ---------------------
 
-OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the `National Oceanic and Atmospheric Administration <NOAA; http://www.ncdc.noaa.gov/>`_.  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
+OK, so first up we are going to have to download some data.  The figure that we will be generating will display some of the paleo-climate data stretching back over 400kyr, taken from the famous Vostok ice core and first published by Petit et al. (1999).  Conveniently, this data is now freely available from the `National Oceanic and Atmospheric Administration (NOAA) <http://www.ncdc.noaa.gov/>`_.  It is easy enough to download the data manually, but now that you have been inducted into the wonderful world of Linux, we will do so via the command line.
 
     * Open a terminal and navigate to your working directory – you may want to create a new directory for this class.
 
