@@ -61,7 +61,8 @@ Now, to generate the data, you could simply use a vector of values with a linear
 So to generate noisy data, we will use a random number generator::
 
      N = 50
-     av_mole = np.random.rand(N)
+     x = np.random.rand(N)
+     av_mole = x
 
 The function ``random.rand(N)`` creates an array of size N and propagate it with random samples from a uniform distribution over [0, 1).
 
@@ -72,8 +73,8 @@ Now let's create the ``HIG`` variable::
 
 A third variable called ``area`` (also fake, of course) gives the size of the 50 fields that were studied to provide the data. We now create the error associated to each variable::
 
-      mole_error = 0.1 + 0.1*np.sqrt(x)
-      hig_error = 0.1 + 0.2*np.sqrt(y)/10
+      mole_error = 0.1 + 0.1*np.sqrt(av_mole)
+      hig_error = 0.1 + 0.2*np.sqrt(HIG)/10
 
 
 Scatter plot, error bars and additional information
